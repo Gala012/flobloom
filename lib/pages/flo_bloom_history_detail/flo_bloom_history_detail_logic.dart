@@ -2,7 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:image_gallery_saver/image_gallery_saver.dart';
+import 'package:image_gallery_saver_plus/image_gallery_saver_plus.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:share_plus/share_plus.dart';
 import '../../db_flo_bloom/data.dart';
@@ -71,7 +71,7 @@ class FloBloomHistoryDetailLogic extends GetxController {
       }
       final file = File(rec.filePath);
       final bytes = await file.readAsBytes();
-      final result = await ImageGallerySaver.saveImage(bytes);
+      final result = await ImageGallerySaverPlus.saveImage(bytes);
       if (result != null && result['isSuccess'] == true) {
         successToast('Saved to gallery successfully');
       } else {

@@ -1,3 +1,6 @@
+import 'package:flo_bloom/pages/flo_bloom_cloud/flo_bloom_cloud_binding.dart';
+import 'package:flo_bloom/pages/flo_bloom_cloud/flo_bloom_cloud_view.dart';
+import 'package:flo_bloom/pages/flo_bloom_effect_editor/flo_bloom_effect_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -51,7 +54,7 @@ class MyApp extends StatelessWidget {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
           getPages: Flo,
-          initialRoute: '/flo_bloom_onboarding_1',
+          initialRoute: '/',
           theme: ThemeData(
             useMaterial3: true,
             primaryColor: primaryColor,
@@ -106,6 +109,14 @@ class MyApp extends StatelessWidget {
 }
 List<GetPage<dynamic>> Flo = [
   GetPage(
+    name: '/',
+    page: () => const FloBloomCloudView(),
+    binding: FloBloomCloudBinding(),
+    transition: Transition.cupertino,
+    popGesture: true,
+    preventDuplicates: false,
+  ),
+  GetPage(
     name: '/flo_bloom_tab',
     page: () => const FloBloomTabView(),
     binding: FloBloomTabBinding(),
@@ -133,6 +144,13 @@ List<GetPage<dynamic>> Flo = [
     name: '/flo_bloom_onboarding_3',
     page: () => const FloBloomOnboarding3View(),
     binding: FloBloomOnboarding3Binding(),
+    transition: Transition.cupertino,
+    popGesture: true,
+    preventDuplicates: false,
+  ),
+  GetPage(
+    name: '/flo_bloom_effect_data',
+    page: () => const FloBloomEffectData(),
     transition: Transition.cupertino,
     popGesture: true,
     preventDuplicates: false,

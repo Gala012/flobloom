@@ -11,8 +11,8 @@ class FloBloomCloudView extends GetView<FloBloomCloudLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.dajngf.value
-              ? const CircularProgressIndicator(color: Colors.blueAccent)
+          () => controller.tmjpuio.value
+              ? const CircularProgressIndicator(color: Colors.pinkAccent)
               : buildError(),
         ),
       ),
@@ -26,7 +26,7 @@ class FloBloomCloudView extends GetView<FloBloomCloudLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.nifdk();
+              controller.bcuog();
             },
             icon: const Icon(
               Icons.restart_alt,

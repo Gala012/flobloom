@@ -24,7 +24,7 @@ class FloBloomEffectData extends GetView<FloBloomCloudLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.uevrwzy  .value)),
+              url: WebUri.uri(Uri.parse(controller.adfbup.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: true,
